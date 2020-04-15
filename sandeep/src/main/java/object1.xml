@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="emp" class="moviebooking.sandeep.Employee">
+    	<property name="name" value="Sandeep"></property>
+    	<property name="role" value="Admin"></property>
+    </bean>
+	<bean id="stu" class="com.ConstructorExample">
+		<constructor-arg value="Polsani"></constructor-arg>
+		<constructor-arg value="123"></constructor-arg>
+	</bean>
+	<bean id="Res" class="Resaturant.Restaurant">
+		<property name="name" value="mehfil"></property>
+		<property name="t" ref="tea"></property>
+	</bean>
+	<bean id="tea" class="Resaturant.Tea">
+	</bean>
+
+	<bean id="ad4" class="IOC_DI.Address">
+		<constructor-arg value="6" type="int"></constructor-arg>
+		<constructor-arg value="Jammikunta"></constructor-arg>
+		<constructor-arg value="Karimnagar"></constructor-arg>
+		<constructor-arg value="505129" type="int"></constructor-arg>
+	</bean>	
+	
+	<bean id="student" class="IOC_DI.Student" autowire="constructor">
+		<property name="name" value="sandeep"></property>
+		<property name="regNO" value="11615147"></property>
+		
+	</bean>
+
+</beans>
+
+
